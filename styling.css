@@ -1,0 +1,135 @@
+.grid {
+    display: grid;
+    grid-template-rows: 100px 1fr 1fr 100px;
+    grid-template-columns: 30% 15% auto 15%;
+    grid-template-areas:
+        "A1 A2 A2 A2"
+        "A3 A4 A4 A5"
+        "A3 A6 A7 A7"
+        "A3 A8 A8 A8";
+}
+body {
+    background-color: #000;
+}
+.parent-container {
+    border: 1px solid rgb(0, 0, 0);
+    outline: 1px solid black;
+}
+
+.child-container {
+    color: rgb(0, 0, 0);
+    border: 2px solid #000;
+    background: hsl(35, 100%, 75%);
+}
+
+#header {
+    background: #ffebcd;
+    outline: 1px solid #000;
+}
+
+#header img {
+    width: auto;
+    height: 160px;
+    float: right;
+}
+
+#A1 {
+    display: flex;
+    grid-area: A1;
+    justify-content: center;
+}
+
+#A1 img {
+    height: 100%;
+    width: auto;
+    vertical-align: middle;
+}
+
+#A2 {
+    display: flex;
+    flex-direction: column;
+    grid-area: A2;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#A2 h1 {
+    height: 40;
+    margin-bottom: 0;
+}
+
+#A2 h2 {
+    display: flex;
+    height: auto;
+    margin-top: 0;
+    align-items: center;
+}
+
+#A2 img {
+    height: 33px;
+    width: auto;
+    border: 1px solid #000;
+}
+
+#A3 {
+    grid-area: A3;
+}
+
+#A4 {
+    grid-area: A4;
+    background: #000;
+}
+
+#A4 table {
+    width: 100%;
+    height: 100%;
+}
+
+#A4 tr:nth-child(odd) {
+    background: #ffebcd;
+}
+
+#A4 tr:nth-child(even) {
+    background: rgb(211, 211, 211);
+}
+
+#A4 tr:hover {
+    background: white;
+}
+
+#A5 {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    grid-area: A5;
+}
+
+#A6 {
+    grid-area: A6;
+}
+
+#A6 li {
+    margin: 10px 0;
+}
+
+#A6 a {
+    color: black;
+}
+
+#A7 {
+    grid-area: A7;
+}
+
+#A8 {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-area: A8;
+}
+
+#A8 img {
+    height: 80px;
+    width: auto;
+}
