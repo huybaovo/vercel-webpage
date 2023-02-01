@@ -27,6 +27,11 @@ body {
     outline: 1px solid #000;
 }
 
+#header h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 #header img {
     width: auto;
     height: 160px;
